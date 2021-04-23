@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+
 import { Link } from "react-router-dom";
 import { TextField, Button } from "@material-ui/core";
+import { multiEventContext } from "../EventContext";
 
 function Vendor() {
+  const { setStep, userData, setUserData, submitData } = useContext(
+    multiEventContext
+  );
+
   return (
     <div>
       <div>
@@ -22,9 +28,16 @@ function Vendor() {
             color="secondary"
           />
         </div>
-
-        <Button variant="contained" color="primary">
-          Next
+        <Button
+          style={{ marginRight: ".5rem" }}
+          variant="contained"
+          color="secondary"
+          onClick={() => setStep(3)}
+        >
+          Back
+        </Button>
+        <Button variant="contained" color="primary" onClick={submitData}>
+          Submit
         </Button>
       </div>
     </div>

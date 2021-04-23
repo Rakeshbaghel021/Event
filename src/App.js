@@ -1,11 +1,14 @@
 import "./App.css";
+import React, { useContext } from "react";
 import Event from "./components/Event";
 import People from "./components/People";
 import Vendor from "./components/Vendor";
 import { Stepper, StepLabel, Step } from "@material-ui/core";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { multiEventContext } from "./EventContext";
 
 function App() {
+  const { currentStep, finalData } = useContext(multiEventContext);
   function showEvent(step) {
     switch (step) {
       case 1:
@@ -13,6 +16,7 @@ function App() {
         break;
       case 2:
         return <People />;
+        break;
       case 3:
         return <Vendor />;
       default:
@@ -27,7 +31,7 @@ function App() {
         <div className="center-stepper">
           <Stepper
             style={{ width: "18%", margin: "0 auto", alignItems: "center" }}
-            activeStep="1"
+            activeStep={currentStep - 1}
             orientation="horizontal"
           >
             <Step>
@@ -41,7 +45,7 @@ function App() {
             </Step>
           </Stepper>
         </div>
-        {showEvent(1)}
+        {showEvent(currentStep)}
       </header>
     </div>
   );

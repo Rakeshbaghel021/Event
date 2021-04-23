@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { multiEventContext } from "../EventContext";
 
 function Event() {
+  const { setStep, userData, setUserData } = useContext(multiEventContext);
   return (
     <div>
       <div>
@@ -31,7 +33,7 @@ function Event() {
           />
         </div>
 
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={() => setStep(2)}>
           Next
         </Button>
       </div>

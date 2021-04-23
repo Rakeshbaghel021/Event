@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import EventContext from "./EventContext";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <EventContext>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </BrowserRouter>,
+  </EventContext>,
   document.getElementById("root")
 );
