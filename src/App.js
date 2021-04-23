@@ -38,7 +38,7 @@ function App() {
           >
             Event
           </span>
-          Based Mangement Systems
+          Based Mangement System
         </h1>
         <div className="center-stepper">
           <Stepper
