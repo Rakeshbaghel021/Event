@@ -10,6 +10,7 @@ const EventContext = () => {
     setFinalData((finalData) => [...finalData, userData]);
     setUserData("");
     setStep(1);
+    alert("Data Submit");
   }
 
   return (

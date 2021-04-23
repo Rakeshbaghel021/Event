@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.body {
+  font-family: Arial, sans-serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #e01809;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

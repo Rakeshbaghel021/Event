@@ -6,6 +6,7 @@ import Vendor from "./components/Vendor";
 import { Stepper, StepLabel, Step } from "@material-ui/core";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { multiEventContext } from "./EventContext";
+import DisplayData from "./components/DisplayData";
 
 function App() {
   const { currentStep, finalData } = useContext(multiEventContext);
@@ -27,7 +28,9 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <h1 style={{ color: "grey" }}>Event Based Mangement System</h1>
+        <h1 style={{ color: "grey", textDecoration: "underline" }}>
+          <span style={{ color: "blue" }}>Event</span> Based Mangement System
+        </h1>
         <div className="center-stepper">
           <Stepper
             style={{ width: "18%", margin: "0 auto", alignItems: "center" }}
@@ -46,6 +49,8 @@ function App() {
           </Stepper>
         </div>
         {showEvent(currentStep)}
+        <br />
+        {finalData.length > 0 ? <DisplayData /> : ""}
       </header>
     </div>
   );

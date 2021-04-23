@@ -32,18 +32,6 @@ function Event() {
             color="secondary"
           />
         </div>
-        <div>
-          <TextField
-            label="Email"
-            margin="normal"
-            value={userData["email"]}
-            onChange={(e) =>
-              setUserData({ ...userData, email: e.target.value })
-            }
-            variant="outlined"
-            color="secondary"
-          />
-        </div>
 
         <Button variant="contained" color="primary" onClick={() => setStep(2)}>
           Next
