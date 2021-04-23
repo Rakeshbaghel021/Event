@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { multiEventContext } from "../EventContext";
 import {
   TableContainer,
@@ -21,7 +21,7 @@ function DisplayData() {
           style={{ width: "70%", justifyContent: "center" }}
         >
           <TableHead>
-            <TableRow style={{ backgroundColor: "balck", color: "red" }}>
+            <TableRow style={{ backgroundColor: "sandybrown", color: "white" }}>
               <TableCell>First Name</TableCell>
               <TableCell>Last Name</TableCell>
               <TableCell>Number of People</TableCell>
@@ -32,7 +32,7 @@ function DisplayData() {
           </TableHead>
           <TableBody>
             {finalData.map((data) => (
-              <TableRow key={data.amount}>
+              <TableRow>
                 <TableCell>{data.firstname}</TableCell>
                 <TableCell>{data.lastname}</TableCell>
                 <TableCell>{data.numberofpeople}</TableCell>

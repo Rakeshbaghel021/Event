@@ -4,6 +4,7 @@ import Event from "./components/Event";
 import People from "./components/People";
 import Vendor from "./components/Vendor";
 import { Stepper, StepLabel, Step } from "@material-ui/core";
+import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { multiEventContext } from "./EventContext";
 import DisplayData from "./components/DisplayData";
@@ -14,10 +15,8 @@ function App() {
     switch (step) {
       case 1:
         return <Event />;
-        break;
       case 2:
         return <People />;
-        break;
       case 3:
         return <Vendor />;
       default:
@@ -29,7 +28,17 @@ function App() {
     <div className="App">
       <header className="app-header">
         <h1 style={{ color: "grey", textDecoration: "underline" }}>
-          <span style={{ color: "blue" }}>Event</span> Based Mangement System
+          <BeachAccessIcon />
+          <span
+            style={{
+              color: "blue",
+              marginRight: ".3rem",
+              textDecoration: "none",
+            }}
+          >
+            Event
+          </span>
+          Based Mangement System
         </h1>
         <div className="center-stepper">
           <Stepper

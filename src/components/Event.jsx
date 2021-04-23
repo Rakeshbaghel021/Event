@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { TextField, Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
+
 import { multiEventContext } from "../EventContext";
 
 function Event() {
