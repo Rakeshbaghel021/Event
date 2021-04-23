@@ -6,7 +6,11 @@ const EventContext = () => {
   const [currentStep, setStep] = useState(1);
   const [userData, setUserData] = useState([]);
   const [finalData, setFinalData] = useState([]);
-  function submitData() {}
+  function submitData() {
+    setFinalData((finalData) => [...finalData, userData]);
+    setUserData("");
+    setStep(1);
+  }
 
   return (
     <div>

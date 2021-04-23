@@ -14,6 +14,10 @@ function People() {
           <TextField
             label="Number of People"
             margin="normal"
+            value={userData["numberofpeople"]}
+            onChange={(e) =>
+              setUserData({ ...userData, numberofpeople: e.target.value })
+            }
             variant="outlined"
             color="secondary"
           />
@@ -22,6 +26,10 @@ function People() {
           <TextField
             label="Amount"
             margin="normal"
+            value={userData["amount"]}
+            onChange={(e) =>
+              setUserData({ ...userData, amount: e.target.value })
+            }
             variant="outlined"
             color="secondary"
           />
@@ -30,7 +38,7 @@ function People() {
           style={{ marginRight: ".5rem" }}
           variant="contained"
           color="secondary"
-          onClick={() => setStep(3)}
+          onClick={() => setStep(1)}
         >
           Back
         </Button>

@@ -16,6 +16,10 @@ function Vendor() {
           <TextField
             label="Primary Vendor"
             margin="normal"
+            value={userData["vendor"]}
+            onChange={(e) =>
+              setUserData({ ...userData, vendor: e.target.value })
+            }
             variant="outlined"
             color="secondary"
           />
@@ -24,6 +28,10 @@ function Vendor() {
           <TextField
             label="Country"
             margin="normal"
+            value={userData["country"]}
+            onChange={(e) =>
+              setUserData({ ...userData, country: e.target.value })
+            }
             variant="outlined"
             color="secondary"
           />
@@ -32,7 +40,7 @@ function Vendor() {
           style={{ marginRight: ".5rem" }}
           variant="contained"
           color="secondary"
-          onClick={() => setStep(3)}
+          onClick={() => setStep(2)}
         >
           Back
         </Button>

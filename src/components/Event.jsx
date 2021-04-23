@@ -12,6 +12,10 @@ function Event() {
           <TextField
             label="First name"
             margin="normal"
+            value={userData["firstname"]}
+            onChange={(e) =>
+              setUserData({ ...userData, firstname: e.target.value })
+            }
             variant="outlined"
             color="secondary"
           />
@@ -20,6 +24,10 @@ function Event() {
           <TextField
             label="Last name"
             margin="normal"
+            value={userData["lastname"]}
+            onChange={(e) =>
+              setUserData({ ...userData, lastname: e.target.value })
+            }
             variant="outlined"
             color="secondary"
           />
@@ -28,6 +36,10 @@ function Event() {
           <TextField
             label="Email"
             margin="normal"
+            value={userData["email"]}
+            onChange={(e) =>
+              setUserData({ ...userData, email: e.target.value })
+            }
             variant="outlined"
             color="secondary"
           />
