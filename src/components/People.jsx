@@ -1,17 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { TextField, Button } from "@material-ui/core";
 
 function People() {
   return (
     <div>
-      <h1>Number of People</h1>
-      <input type="text" placeholder="name" />
-      <Link to="/event">
-        <button>Back</button>
-      </Link>
-      <Link to="/vendor">
-        <button>Next</button>
-      </Link>
+      <div>
+        <div>
+          <TextField
+            label="Number of People"
+            margin="normal"
+            variant="outlined"
+            color="secondary"
+          />
+        </div>
+        <div>
+          <TextField
+            label="Amount"
+            margin="normal"
+            variant="outlined"
+            color="secondary"
+          />
+        </div>
+
+        <Button variant="contained" color="primary">
+          Next
+        </Button>
+      </div>
     </div>
   );
 }

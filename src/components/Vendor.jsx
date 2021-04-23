@@ -1,15 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { TextField, Button } from "@material-ui/core";
 
 function Vendor() {
   return (
     <div>
-      <h1>Primary Vendor</h1>
-      <input type="text" placeholder="name" />
-      <Link to="/people">
-        <button>Back</button>
-      </Link>
-      <button>Submit</button>
+      <div>
+        <div>
+          <TextField
+            label="Primary Vendor"
+            margin="normal"
+            variant="outlined"
+            color="secondary"
+          />
+        </div>
+        <div>
+          <TextField
+            label="Country"
+            margin="normal"
+            variant="outlined"
+            color="secondary"
+          />
+        </div>
+
+        <Button variant="contained" color="primary">
+          Next
+        </Button>
+      </div>
     </div>
   );
 }

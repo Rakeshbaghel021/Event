@@ -1,27 +1,40 @@
 import React, { useState } from "react";
+import { TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 function Event() {
-  const [name, setname] = useState("");
-  const onhandleChange = (e) => {
-    const { name } = e.target.value;
-  };
-
-  const handleSumbit = () => {
-    setname();
-  };
   return (
     <div>
-      <h1>Name</h1>
-      <input
-        type="text"
-        name="name"
-        onChange={onhandleChange}
-        placeholder="name"
-      />
-      <Link to="/people">
-        <button onClick={handleSumbit}>Next</button>
-      </Link>
+      <div>
+        <div>
+          <TextField
+            label="First name"
+            margin="normal"
+            variant="outlined"
+            color="secondary"
+          />
+        </div>
+        <div>
+          <TextField
+            label="Last name"
+            margin="normal"
+            variant="outlined"
+            color="secondary"
+          />
+        </div>
+        <div>
+          <TextField
+            label="Email"
+            margin="normal"
+            variant="outlined"
+            color="secondary"
+          />
+        </div>
+
+        <Button variant="contained" color="primary">
+          Next
+        </Button>
+      </div>
     </div>
   );
 }
